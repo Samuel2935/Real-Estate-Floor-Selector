@@ -1,32 +1,75 @@
 # Real-Estate-Floor-Selector
 This is a real estate floor selector app  that allows potential buyers or renters to view and select specific units or floors within a real estate property, such as an apartment building, condo complex, or commercial tower.
 
-# Key Features
-1. <h5>Interactive Floor Plan</h5>
-<p>Users can click on different floors.</p>
-<p>Each floor can be explored.</p>
-2. <h5>Unit Details on Click</h5>
-When a user clicks a specific unit, they see details like:
-<p>Price</p>
-<p>Size (sq ft/m²)</p>
-<p>Number of rooms</p>
+📝 Overview
+The Mini Real Estate Floor Selector is a simplified React-based interactive prototype that simulates a real estate tower selection experience. It allows users to:
 
+Select from available towers
 
+Choose a specific floor
 
+Explore apartment layouts
 
-– A tower overview page showing three towers (e.g., Tower A, B, C) as clickable cards or sections
+View detailed layout metadata and visuals
 
-– When a tower is selected: a floor view with a list of 10–15 floors
+🎯 Project Goals
+Build a multi-step interactive UI:
 
-– When a floor is selected: show 3–4 apartment layouts with
+Tower Overview
 
- • Thumbnail image (placeholder is fine)
+Floor Selection
 
- • Metadata: area, unit type, room count (dummy data is fine)
+Apartment Layout Preview
 
-– When a layout is selected: show a larger layout image and full metadata
+Apartment Layout Detail View
 
+Ensure smooth UX with hover animations and responsive design.
 
-Bonus interaction:
+Use placeholder data and images for fast prototyping.
 
-When hovering over a unit thumbnail, the floor background behind it should subtly darken and the thumbnail should scale up slightly with a soft animation. This should work smoothly on both desktop and mobile.
+🔍 Features & Requirements
+ Tower Overview Page
+UI: 3 clickable tower cards (Tower A, Tower B, Tower C)
+
+On Click: Navigates to corresponding Floor View
+
+Styling: Cards should have hover effects for interactivity
+
+Floor View
+List of 10–15 Floors: Represented as buttons or a scrollable list
+
+On Floor Select: Load apartment layouts of selected floor
+
+Apartment Layout Gallery
+3–4 Apartment Cards per Floor
+
+Placeholder thumbnail
+
+Dummy metadata:
+
+Area: 120 sqm
+
+Unit Type: 2BHK
+
+Rooms: 3
+
+Bonus Interaction (Hover):
+
+Subtle background darkening of floor
+
+Thumbnail scales up smoothly
+
+Mobile-friendly (touch interactions)
+
+# Tech Stack
+ReactJS for interactive UI and excellent UX
+
+Tailwind CSS for UI styling
+
+TypeScript and JavaScript
+
+Vite for fast & granular hot Module reload
+
+Deployed on Vercel
+
+Github Actions for CI/CD

@@ -67,7 +67,7 @@ Thumbnail scales up smoothly
 
 Mobile-friendly (touch interactions)
 
-# Tools/Libraries
+# Tools & Libraries
 ReactJS for interactive UI and excellent UX
 
 Tailwind CSS for UI styling

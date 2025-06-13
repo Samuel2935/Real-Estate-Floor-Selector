@@ -13,6 +13,7 @@ Explore apartment layouts
 View detailed layout metadata and visuals
 
 🎯 Project Goals
+
 Build a multi-step interactive UI:
 
 Tower Overview
@@ -27,8 +28,10 @@ Ensure smooth UX with hover animations and responsive design.
 
 Use placeholder data and images for fast prototyping.
 
-🔍 Features & Requirements
- Tower Overview Page
+# Features & Requirements
+
+Tower Overview Page
+
 UI: 3 clickable tower cards (Tower A, Tower B, Tower C)
 
 On Click: Navigates to corresponding Floor View
@@ -41,6 +44,7 @@ List of 10–15 Floors: Represented as buttons or a scrollable list
 On Floor Select: Load apartment layouts of selected floor
 
 Apartment Layout Gallery
+
 3–4 Apartment Cards per Floor
 
 Placeholder thumbnail

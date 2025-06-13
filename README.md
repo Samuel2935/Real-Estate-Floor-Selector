@@ -39,6 +39,7 @@ On Click: Navigates to corresponding Floor View
 Styling: Cards should have hover effects for interactivity
 
 Floor View
+
 List of 10–15 Floors: Represented as buttons or a scrollable list
 
 On Floor Select: Load apartment layouts of selected floor
@@ -51,11 +52,11 @@ Placeholder thumbnail
 
 Dummy metadata:
 
-Area: 120 sqm
+Area
 
-Unit Type: 2BHK
+Unit Type
 
-Rooms: 3
+Rooms
 
 Bonus Interaction (Hover):
 

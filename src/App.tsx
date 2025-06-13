@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronRight, Home, Building, MapPin } from 'lucide-react';
 
 interface Unit {

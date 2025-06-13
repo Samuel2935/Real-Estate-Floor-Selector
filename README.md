@@ -59,7 +59,7 @@ Unit Type
 
 Rooms
 
-Bonus Interaction (Hover):
+Interaction on hover:
 
 Subtle background darkening of floor
 

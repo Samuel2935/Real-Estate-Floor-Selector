@@ -1,8 +1,9 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "mini-real-estate-floor-selector",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Samuel Ezeh",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

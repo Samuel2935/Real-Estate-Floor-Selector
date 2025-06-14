@@ -1,16 +1,19 @@
 import React from 'react';
 import { ChevronRight, Home, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Tower } from '../types';
 
 interface TowerOverviewProps {
   towers: Tower[];
-  onTowerSelect: (tower: Tower) => void;
 }
 
-export const TowerOverview: React.FC<TowerOverviewProps> = ({ 
-  towers, 
-  onTowerSelect 
-}) => {
+export const TowerOverview: React.FC<TowerOverviewProps> = ({ towers }) => {
+  const navigate = useNavigate();
+
+  const handleTowerSelect = (tower: Tower) => {
+    navigate(`/tower/${tower.id}`);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4 py-12">
@@ -27,7 +30,7 @@ export const TowerOverview: React.FC<TowerOverviewProps> = ({
           {towers.map((tower) => (
             <div
               key={tower.id}
-              onClick={() => onTowerSelect(tower)}
+              onClick={() => handleTowerSelect(tower)}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden group"
             >
               <div className="h-48 bg-gradient-to-br from-blue-600 to-blue-800 relative overflow-hidden">

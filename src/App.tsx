@@ -1,72 +1,27 @@
-import { useState } from 'react';
-import { Tower, Floor, Unit } from './types';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { towers } from './data/towers';
+import { LandingPage } from './components/LandingPage';
 import { TowerOverview } from './components/TowerOverview';
-import { FloorView } from './components/FloorView';
-import { UnitsView } from './components/UnitsView';
-import { UnitDetailView } from './components/UnitDetailView';
+import { TowerRouteWrapper, FloorRouteWrapper, UnitRouteWrapper } from './pages/RouteWrapper';
 
 function App() {
-  const [selectedTower, setSelectedTower] = useState<Tower | null>(null);
-  const [selectedFloor, setSelectedFloor] = useState<Floor | null>(null);
-  const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
-
-  const resetToTowers = () => {
-    setSelectedTower(null);
-    setSelectedFloor(null);
-    setSelectedUnit(null);
-  };
-
-  const resetToFloors = () => {
-    setSelectedFloor(null);
-    setSelectedUnit(null);
-  };
-
-  const resetToUnits = () => {
-    setSelectedUnit(null);
-  };
-
-  // Render appropriate view based on state
-  if (selectedUnit && selectedFloor && selectedTower) {
-    return (
-      <UnitDetailView
-        tower={selectedTower}
-        floor={selectedFloor}
-        unit={selectedUnit}
-        onBackToTowers={resetToTowers}
-        onBackToFloors={resetToFloors}
-        onBackToUnits={resetToUnits}
-      />
-    );
-  }
-  
-  if (selectedFloor && selectedTower) {
-    return (
-      <UnitsView
-        tower={selectedTower}
-        floor={selectedFloor}
-        onUnitSelect={setSelectedUnit}
-        onBackToTowers={resetToTowers}
-        onBackToFloors={resetToFloors}
-      />
-    );
-  }
-  
-  if (selectedTower) {
-    return (
-      <FloorView
-        tower={selectedTower}
-        onFloorSelect={setSelectedFloor}
-        onBackToTowers={resetToTowers}
-      />
-    );
-  }
-  
   return (
-    <TowerOverview
-      towers={towers}
-      onTowerSelect={setSelectedTower}
-    />
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/towers" element={
+          <TowerOverview
+            towers={towers}
+            onTowerSelect={(tower) => {
+              window.location.href = `/tower/${tower.id}`;
+            }}
+          />
+        } />
+        <Route path="/tower/:towerId" element={<TowerRouteWrapper />} />
+        <Route path="/tower/:towerId/floor/:floorId" element={<FloorRouteWrapper />} />
+        <Route path="/tower/:towerId/floor/:floorId/unit/:unitId" element={<UnitRouteWrapper />} />
+      </Routes>
+    </Router>
   );
 }
 
